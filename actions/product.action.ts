@@ -23,8 +23,8 @@ const s3Client = new S3Client({
   },
 });
 
-const TABLE_NAME = "BackendStack-ProductTableB8D4E9ED-1T96OPKD7HTJJ";
-const BUCKET_NAME = "backendstack-imagebucket97210811-licekhlp3pci";
+const TABLE_NAME = process.env.NEXT_PUBLIC_PRODUCT_TABLE;
+const BUCKET_NAME = process.env.NEXT_PUBLIC_BUCKET;
 
 async function fetchItemsFromDynamoDB() {
   const params = {
